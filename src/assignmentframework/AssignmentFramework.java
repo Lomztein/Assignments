@@ -8,6 +8,7 @@ package assignmentframework;
 import assignmentframework.module02.*;
 import assignmentframework.module03.*;
 import assignmentframework.module04.*;
+import assignmentframework.module05.*;
 import java.util.Scanner;
 
 /**
@@ -39,7 +40,12 @@ public class AssignmentFramework {
                 new Module04_AssignmentC5(),
                 new Module04_AssignmentC6(),
                 new Module04_Assignment73(),
-                new Module04_Assignment82(),}
+                new Module04_Assignment82(),
+                new Module05_Assignment63 (),
+                new Module05_Assignment68 (),
+                new Module05_Assignment622 (),
+                new Module05_AssignmentD8 (),
+            }
     );
 
     public static final Scanner SCANNER = new Scanner(System.in);

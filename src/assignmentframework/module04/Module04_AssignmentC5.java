@@ -36,10 +36,10 @@ public class Module04_AssignmentC5 implements IAssignment {
             }
 
             // For each of the numbers starting at i, going up one i each time.
-            for (int j = i; j < max; j += i) {
+            for (int j = i * 2; j < max; j += i) {
 
                 // If it hasn't been marked and is not our starting number, then mark it as non-prime.
-                if (!markedNumbers[j] && i != j) {
+                if (!markedNumbers[j]) {
 
                     markedNumbers[j] = true;
                     System.out.println("Marking " + j + " as a multiple of " + i);

@@ -13,6 +13,8 @@ import assignmentframework.Utility;
  * @author Lomztein
  */
 public class Module03_AssignmentB5 implements IAssignment {
+    
+    public final double ROUND_MARGIN = 1d / 64d;
 
     @Override
     public String getIdentifier() {
@@ -49,6 +51,20 @@ public class Module03_AssignmentB5 implements IAssignment {
         }
         
         return true;
+    }
+    
+    // A prime number is called a Mersenne prime if it can be written in the form 2^p - 1 for some positive integer p.
+    private boolean isMersenne (int marsenne) {
+        
+        double p = logN (2d, marsenne - 1d);
+        double rounded = Math.round (p);
+        
+        return Math.abs(p - rounded) < ROUND_MARGIN;
+        
+    }
+    
+    private double logN (double base, double number) {
+        return Math.log (number) / Math.log (base);
     }
     
 }
