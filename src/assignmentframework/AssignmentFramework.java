@@ -9,6 +9,9 @@ import assignmentframework.module02.*;
 import assignmentframework.module03.*;
 import assignmentframework.module04.*;
 import assignmentframework.module05.*;
+import assignmentframework.module07.*;
+import assignmentframework.module08.*;
+import assignmentframework.module09.Module09;
 import java.util.Scanner;
 
 /**
@@ -45,6 +48,10 @@ public class AssignmentFramework {
                 new Module05_Assignment68 (),
                 new Module05_Assignment622 (),
                 new Module05_AssignmentD8 (),
+                new Module07 (),
+                new Module08_Assignment93 (),
+                new Module08_Assignment98 (),
+                new Module09 (),
             }
     );
 
