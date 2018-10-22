@@ -22,11 +22,22 @@ public class NonfoodProduct extends Product {
     public String toString() {
         // Udvid super.toString () ved at retunere dens resultatet med data der representere NonfoodProducts materialer tilføjet til det.
         // Ligesom i Stores toString () samles alle elementer i til et sæt linjer.
-        String result = super.toString () + "\n";
+        String result = super.toString() + "\n";
         for (String material : materials) {
             result += material + "\n";
         }
         return result;
 
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (!(o instanceof NonfoodProduct)) {
+            return false;
+        }
+
+        NonfoodProduct other = (NonfoodProduct) o;
+
+        return (super.equals(o));
     }
 }

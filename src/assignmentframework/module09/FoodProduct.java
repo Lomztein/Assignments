@@ -6,6 +6,7 @@
 package assignmentframework.module09;
 
 import java.util.Date;
+import java.util.Objects;
 
 /**
  *
@@ -40,6 +41,19 @@ public class FoodProduct extends Product {
     public String toString() {
         // Udvid super.toString () ved at retunere dens resultatet med data der representere FoodProduct tilføjet til det.
         return super.toString() + " Spoil Date: " + getSpoilDate().toString() + " - Store Temperature: " + getStoreTemperature();
+    }
+
+    @Override
+    public boolean equals(Object o) {
+
+        if (!(o instanceof FoodProduct)) {
+            return false;
+        }
+        FoodProduct other = (FoodProduct) o;
+
+        return (super.equals(o)
+                && this.getSpoilDate() == other.getSpoilDate()
+                && this.getStoreTemperature() == other.getStoreTemperature());
     }
 
 }

@@ -42,20 +42,20 @@ public class Store {
         @Override
         public String toString() {
             String result = "";
-            
+
             // Gå over hver enkelte Product i databasen og udskriv dens toString () til en variabel.
             for (Product product : products) {
                 // \n betyder "newline", og fortæller teksten at den skal gå ned på næste linje.
                 result += product.toString() + "\n";
             }
-            
+
             // Returnér de samlede linjer der tilsammen representerer hele databasen.
             return result;
         }
 
         public double totalPrice() {
             double result = 0d;
-            
+
             // Gå over alle Product objekter i databasen og sum deres priser.
             for (Product product : products) {
                 result += product.getCost();
@@ -66,11 +66,11 @@ public class Store {
         public void addProduct(Product product) {
             // Test først for at sørge for at ingen Product med samme ID'er bliver tilføjet ved fejl.
             if (!products.contains(product)) {
-                
+
                 // Tilføj produktet til databasens interne liste.
                 products.add(product);
             } else {
-                
+
                 // Hvis der allerede eksisterede et produkt med det her ID, så giv fejlbesked.
                 System.out.println("Error - A product with ID " + product.getId() + " already exists.");
             }
@@ -78,11 +78,21 @@ public class Store {
         }
 
         public void removeProduct(int productId) {
-            
+
             // Gå over alle produkter og fjern den hvis ID passer til det givne ID.
-            for (int i = 0; i < products.size (); i++) {
-                if (products.get(i).getId() == productId)
+            for (int i = 0; i < products.size(); i++) {
+                if (products.get(i).getId() == productId) {
                     products.remove(i);
+                }
+            }
+        }
+
+        public void removeProduct(Product product) {
+
+            if (products.contains(product)) {
+                products.remove(product);
+            } else {
+                System.out.println("Product does not exist within the database.");
             }
         }
 

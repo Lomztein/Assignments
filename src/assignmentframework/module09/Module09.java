@@ -37,7 +37,7 @@ public class Module09 implements IAssignment {
 
         // Placér 2 NonfoodProduct objekter i storens' database.
         store.getProductDatabase().addProduct(new NonfoodProduct (5, "Hentai", 69d, new String[] { "Loli", "FBI", "Lonely Men" }));
-        store.getProductDatabase().addProduct(new NonfoodProduct (5, "McDonalds", 10d, new String[] { "Sawdust", "Carceogens", "Americans" }));
+        store.getProductDatabase().addProduct(new NonfoodProduct (6, "McDonalds", 10d, new String[] { "Sawdust", "Carceogens", "Americans" }));
         
         // Fordi de alle sammen er af typen "Product" eftersom de enten er, eller arver fra den, kan de alle opbevares i storens' ProductDatabase objekt.
         // Print det hele ud ved brug af den overskrevne toString () af ProductDatabase.

@@ -12,7 +12,7 @@ package assignmentframework.module09;
 public class Product {
 
     private final int id;
-    private final String name;
+    private String name;
     private double cost;
 
     public Product(int id, String name, double cost) {
@@ -25,8 +25,15 @@ public class Product {
     public String toString() {
         return "ID: " + getId() + " - Name: " + getName() + " $" + getCost();
     }
-    
-        /**
+
+    /**
+     * @param name the name to set
+     */
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    /**
      * @return the id
      */
     public int getId() {
@@ -54,4 +61,13 @@ public class Product {
         this.cost = cost;
     }
 
+    public boolean equals(Object o) {
+        if (!(o instanceof Product)) {
+            return false;
+        }
+        Product other = (Product) o;
+        return (this.getId() == other.getId()
+                && this.getName().equals(other.getName())
+                && this.getCost() == other.getCost());
+    }
 }
