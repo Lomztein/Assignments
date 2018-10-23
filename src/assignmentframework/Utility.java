@@ -56,7 +56,7 @@ public class Utility {
     
     public static String getInput (String prefix) {
         System.out.print (prefix);
-        return SCANNER.next();
+        return SCANNER.nextLine();
     }
     
     
